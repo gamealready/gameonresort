@@ -154,6 +154,35 @@
       font-size: 1.05rem;
     }
 
+    .photos {
+      padding-bottom: 12px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .property-photo {
+      display: grid;
+      min-height: 250px;
+      margin: 0;
+      overflow: hidden;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--white);
+    }
+
+    .property-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+    }
+
     .button {
       display: inline-flex;
       min-height: 48px;
@@ -323,6 +352,8 @@
       .hero-copy > p:not(.eyebrow) { font-size: .98rem; }
       .intro { display: block; padding: 66px 0 26px; }
       .intro p { margin-top: 15px; }
+      .photo-grid { grid-template-columns: 1fr; gap: 13px; }
+      .property-photo { min-height: 0; border-radius: 16px; }
       .listing-grid { grid-template-columns: 1fr; gap: 13px; padding-bottom: 58px; }
       .listing-card { min-height: 205px; padding: 24px; }
       .contact { align-items: flex-start; flex-direction: column; margin-bottom: 52px; }
@@ -357,6 +388,24 @@
             Explore our stays
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+        </div>
+      </section>
+
+      <section class="photos" aria-labelledby="photos-title">
+        <div class="intro">
+          <h2 id="photos-title">A look inside.</h2>
+          <p>Take a peek at the spaces waiting for you.</p>
+        </div>
+        <div class="photo-grid">
+          <figure class="property-photo">
+            <img src="1.png" alt="Kitchen and dining area at Game On Resort" loading="lazy" decoding="async">
+          </figure>
+          <figure class="property-photo">
+            <img src="2.png" alt="Game On Resort property photo" loading="lazy" decoding="async">
+          </figure>
+          <figure class="property-photo">
+            <img src="3.png" alt="Game On Resort property photo" loading="lazy" decoding="async">
+          </figure>
         </div>
       </section>
 
